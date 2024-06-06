@@ -1,0 +1,82 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+    id 'com.google.firebase.firebase-perf'
+}
+
+android {
+    namespace 'com.doctroixx.NDnevnik'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.doctroixx.NDnevnik"
+        minSdk 21
+        targetSdk 33
+        // BETA VersionCode >= 100; VersionCode <100 - Development >= 200 - RELEASE
+
+        versionCode 233
+        versionName "RELEASE 1.3.3"
+
+//        versionCode 108
+//        versionName "0.8 PRE-RELEASE"
+
+//        versionCode 1
+//        versionName "[DEVELOPMENT] V2"
+
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable false
+            getIsDefault().set(true)
+//            debuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_9
+        targetCompatibility JavaVersion.VERSION_1_9
+    }
+}
+
+dependencies {
+    implementation platform('com.google.firebase:firebase-bom:31.1.1')
+    implementation 'com.google.firebase:firebase-analytics'
+
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.preference:preference:1.1.+'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation 'com.google.firebase:firebase-crashlytics:18.3.2'
+
+    implementation files('libs/mpandroidchartlibrary-2-2-4.jar')
+    implementation 'com.google.firebase:firebase-messaging:23.4.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+
+    implementation 'androidx.work:work-runtime-ktx:2.7.0-alpha05'
+
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+
+    implementation(platform("com.google.firebase:firebase-bom:32.7.1"))
+
+    // Add the dependency for the Performance Monitoring library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation("com.google.firebase:firebase-perf")
+
+    implementation "com.squareup.okhttp3:okhttp:4.10.0"
+    implementation 'org.jsoup:jsoup:1.15.3'
+    implementation 'com.google.code.gson:gson:2.8.8'
+}

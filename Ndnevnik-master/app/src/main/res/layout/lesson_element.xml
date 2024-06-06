@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/lessons"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:dividerPadding="5dp"
+    android:orientation="vertical"
+    android:paddingVertical="10dp"
+    android:showDividers="beginning|middle|end">
+
+
+    <ImageView
+        android:id="@+id/subjectAverageColor"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/lessonNumber"
+        app:layout_constraintStart_toEndOf="@+id/lessonNumber"
+        app:layout_constraintTop_toTopOf="@+id/lessonNumber"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/circle" />
+
+    <TextView
+        android:id="@+id/lessonTime"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="8:00 - 8:40"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_conversion_absoluteHeight="19dp"
+        tools:layout_conversion_absoluteWidth="361dp" />
+
+    <TextView
+        android:id="@+id/lessonNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginTop="4dp"
+        android:layout_weight="1"
+        android:text="1"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_conversion_absoluteHeight="19dp"
+        tools:layout_conversion_absoluteWidth="361dp" />
+
+    <TextView
+        android:id="@+id/subject"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="4dp"
+        android:layout_weight="1"
+        android:text="География"
+        android:textColor="?colorOnSecondary"
+        app:layout_constraintStart_toEndOf="@+id/subjectAverageColor"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_conversion_absoluteHeight="19dp"
+        tools:layout_conversion_absoluteWidth="361dp" />
+
+    <LinearLayout
+        android:id="@+id/homeTaskList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subject">
+
+
+        <include layout="@layout/element_notes" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/gradesList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="horizontal"
+        android:layoutDirection="rtl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeTaskList"
+        android:layout_marginHorizontal="15dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

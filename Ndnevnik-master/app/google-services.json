@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "708170940705",
+    "project_id": "ndnevnik-593ec",
+    "storage_bucket": "ndnevnik-593ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:708170940705:android:f0cfed80a655a666b8fe60",
+        "android_client_info": {
+          "package_name": "com.doctroixx.NDnevnik"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "708170940705-ronnsj9p0v8iri0b8tnbcchegvibae6t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUNV51AF7uS26p7J1AevLCR5b3fy3d9Sg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "708170940705-ronnsj9p0v8iri0b8tnbcchegvibae6t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

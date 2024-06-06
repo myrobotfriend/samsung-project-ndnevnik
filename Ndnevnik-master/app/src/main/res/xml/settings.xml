@@ -1,0 +1,55 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="Фоновые задачи">
+        <SwitchPreferenceCompat
+            app:defaultValue="true"
+            app:key="@string/settings_allow_sync"
+            app:title="Включить фоновые задачи" />
+
+        <ListPreference
+            app:defaultValue="15 мин"
+            app:dependency="allow_sync"
+            app:entries="@array/times"
+            app:entryValues="@array/times"
+            app:key="@string/settings_sync_timeout"
+            app:title="Частота синхронизации"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+    <PreferenceCategory app:title="Оформление">
+        <ListPreference
+            app:defaultValue="Как в системе"
+            app:entries="@array/themes"
+            app:entryValues="@array/themes"
+            app:key="@string/settings_theme_mode"
+            app:title="Тема"
+            app:useSimpleSummaryProvider="true" />
+        <SwitchPreferenceCompat
+            app:defaultValue="true"
+            app:key="events_themes"
+            app:summaryOff="Темы не будут меняться взависимости от событий(Например, Новый год)"
+            app:summaryOn="Темы будут меняться взависимости от событий(Например, Новый год)"
+            app:title="Использовать темы событий" />
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Уведомления">
+
+        <SwitchPreferenceCompat
+            app:defaultValue="true"
+            app:key="use_notification"
+            app:summaryOff="Уведомления выключены"
+            app:summaryOn="Уведомления включены"
+            app:title="Использовать уведомления" />
+
+        <ListPreference
+            app:defaultValue="@array/themes"
+            app:dependency="use_notification"
+            app:entries="@array/themes"
+            app:entryValues="@array/themes"
+            app:key="notification_categories"
+            app:title="Категории" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

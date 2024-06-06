@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_week"
+            android:icon="@drawable/vector_week"
+            android:title="Неделя" />
+        <item
+            android:id="@+id/main"
+            android:enabled="false"
+            android:icon="@drawable/vector_main_screen"
+            android:title="Главная"
+            android:visible="false" />
+        <item
+            android:id="@+id/last_grades"
+            android:enabled="true"
+            android:icon="@drawable/vector_last_element"
+            android:title="Последние оценки" />
+        <item
+            android:id="@+id/your_grades"
+            android:icon="@drawable/vector_grades"
+            android:title="Оценки" />
+        <item
+            android:id="@+id/final_grades"
+            android:enabled="true"
+            android:icon="@drawable/vector_calendare"
+            android:title="Итоговые оценки" />
+    </group>
+    <group
+        android:id="@+id/advancedMenu"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/announcement"
+            android:enabled="true"
+            android:icon="@drawable/vector_announcement"
+            android:title="Объявления" />
+
+        <item
+            android:id="@+id/messaging"
+            android:enabled="true"
+            android:icon="@drawable/vector_messaging"
+            android:title="Сообщения" />
+
+        <item
+            android:id="@+id/settings"
+            android:icon="@drawable/vector_settings"
+            android:title="Настройки"
+            android:visible="false" />
+    </group>
+    <group
+        android:layout_width="match_parent"
+        android:id="@+id/calculators"
+        android:layout_height="match_parent" >
+        <item
+            android:id="@+id/menu_grade_calculator"
+            android:enabled="true"
+            android:icon="@drawable/vector_calculator"
+            android:title="Калькулятор оценок" />
+        <item
+            android:id="@+id/menu_grade_simulator"
+            android:enabled="true"
+            android:icon="@drawable/vector_main_screen"
+            android:title="Симулятор оценок" />
+    </group>
+    <group
+        android:id="@+id/profile"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/vector_logout"
+            android:title="Выход" />
+
+        <item
+            android:id="@+id/about"
+            android:enabled="true"
+            android:icon="@drawable/vector_information"
+            android:title="О нас" />
+        <item
+            android:id="@+id/telegram"
+            android:enabled="true"
+            android:icon="@drawable/baseline_gpp_good_24"
+            android:title="Связь с разработчиком" />
+        <item
+            android:id="@+id/secret_menu"
+            android:enabled="true"
+            android:title="" />
+
+    </group>
+</menu>
